@@ -1,0 +1,69 @@
+<div class="app-card-container about-container">
+  <div class="card">
+    <h1>About Me</h1>
+    
+    <hr>
+
+    <div class="row about-me-box">
+      <div class="col-md-4">
+        <%= image_tag "joe-pic.png", width: 300, alt: "profile image"%>
+        <div class="skills-container">
+          <% @skills.each do |skill| %>
+            <div class="inner-skill">
+              <h5><%= skill.title %><h5>
+              <div class="progress">
+                <div 
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-8 about-paragraph">
+        <p>I've been building things my entire life - from construction projects, plumbing repairs, to websites and web applications. It's what I enjoy doing. I now build products to help businesses deliver information as a Full Stack Developer. With experience in Ruby on Rails, JavaScript, React and Redux, I've built social platforms focused on community-empowerment, architectured web applications, and created multi page websites to help businesses deliver information.
+        </p>
+        <p> Have a project in mind? Interested to learn more about me? <br> Lets talk! </p>
+
+        <a target="_blank" href="https://drive.google.com/file/d/1x1DaPSj8TS6pYCo2CAwu2gPZ7vIj58iw/view?usp=sharing">
+        <button
+            class="btn btn-primary"
+            type="button"
+        >
+        Resume
+        </button>
+        </a>
+        
+          <%# <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controler="education"
+          >
+            Education
+          </button> %>
+        </p>
+
+        <%# <p>
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              Flatiron School 2018-2019
+            </div>
+            <div class="card card-block">
+              Northern Virginia Community College - major: computer science 2017-2018
+            </div>
+          </div>
+        </p> %>
+       <a href="https://drive.google.com/file/d/1dJOLefMaercEYmc4hN3SSIbxHxWmPgL2/view">Your Pdf Viewer</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

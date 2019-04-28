@@ -1,0 +1,89 @@
+
+@import "bootstrap";
+@import "jquery-ui";
+
+:root {
+  --jumbotron-padding-y: 3rem;
+}
+
+
+.jumbotron {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-bottom: 0;
+  background-color: #fff;
+ 
+}
+
+.jumbotron-heading {
+ 
+}
+
+.portfolio-image-box {
+  
+}
+
+.portfolio-image-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-show-image-box {
+  width: 100%;
+}
+
+.portfolio-show-image-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-container {
+  margin-top: 3%;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+
+.portfolio-item {
+  padding: 20px;
+}
+
+.portfolio-links {
+  margin-top: 3%;
+  margin-left: 10%;
+}
+
+.portfolio-link {
+  margin-right: 30px;
+}
+
+
+
+
+@media (min-width: 768px) {
+  .jumbotron {
+  
+  }
+}
+

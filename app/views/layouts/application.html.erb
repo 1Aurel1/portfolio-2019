@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <%= favicon_link_tag 'apple-touch-icon.png' %>
+  <%= favicon_link_tag 'favicon-32x32.png' %>
+  <%= favicon_link_tag 'favicon-16x16.png' %>
+  <%= favicon_link_tag 'site.webmanifest' %>
+
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= @page_title %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="test">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <%= render "shared/application_nav"%>
+      
+      <div id="background"></div>
+      <%# <%= login_helper('nav-link') %> 
+
+      <%= yield %>
+
+      <%= render "shared/application_footer"%>
+      <%= source_helper %>
+    </div>
+
+   
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<aside class="col-md-4 blog-sidebar">
+  <div class="p-3 mb-3 bg-light rounded">
+    <h4 class="font-italic">About</h4>
+    <p class="mb-0">Driven Fullstack Web Developer with a passion for music. Currently developing applications with React, Ruby on Rails, Redux, Javascript, PHP, HTML, and CSS.</p>
+  </div>
+
+  <div class="p-3">
+     <h4 class='font-italic'>Topics</h4>
+    <ol class="list-unstyled topic-links">
+      <% @side_bar_topics.each do |topic| %>
+        <li><%= link_to topic.title, topic_path(topic) %> </li>
+      <% end %>
+    </ol>
+  </div>
+  
+  <div class="p-3">
+    <h4 class="font-italic">Find me</h4>
+    <ol class="list-unstyled social-links">
+      <li><a href="https://github.com/Salsa-Dude"><%= fa_icon "github" %> </a></li>
+      <li><a href="https://www.linkedin.com/in/joseph-arias-4b917775/"><%= fa_icon "linkedin" %></a></li>
+      <li><a href="https://codepen.io/JoEaZy/"><%= fa_icon "codepen" %></a></li>
+    </ol>
+  </div>
+</aside><!-- /.blog-sidebar -->

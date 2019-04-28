@@ -1,0 +1,43 @@
+
+
+<div class="col-md-8 blog-main">
+  <h2> <%= @blog.title %></h2>
+
+  <%# <%= @blog.topic.title %> 
+ 
+  <ul class="breadcrumb">
+    <%= link_to "Home", root_path, class: "breadcrumb-item"%>
+    <%= link_to @blog.topic.title, topic_path(@blog.topic), class: "breadcrumb-item"%>
+    <span class="breadcrumb-item active"><%= @blog.title %></span>
+</ul>
+  
+  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)  %> | 
+  <%= link_to 'Back', blogs_path %>
+  
+  <p><%= markdown(@blog.body) %></p>
+
+  <!-- start of comment form -->
+  <% unless current_user.is_a?(GuestUser) %>
+    <%= form_for @comment, url: '#' do |f| %>
+      <div class="form-group">
+        <%= f.label :content %>
+        <%= f.text_area :content, class: 'form-control' %>
+      </div>
+      <%= f.submit "Post Comment", class: "btn btn-primary" %>
+    <% end %>
+  <% end %>
+  <!-- end of comment form -->
+
+  <!-- start of comments -->
+  <div id="comments" data-blog-id="<%= @blog.id %>">
+    <%= render @blog.comments %>
+  </div>
+  <!-- end of comments -->
+
+
+</div><!-- /.blog-main -->
+
+
+
+
+

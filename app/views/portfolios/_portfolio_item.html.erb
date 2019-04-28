@@ -1,0 +1,16 @@
+
+<div class="col-md-4 k">
+  <div class="card mb-4 box-shadow">
+    <div class="portfolio-image-box">
+      <a href="<%= portfolio_show_path(portfolio_item) %>"><%= image_tag portfolio_item.thumb_image.url %></a>
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span> <%= portfolio_item.subtitle %>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
